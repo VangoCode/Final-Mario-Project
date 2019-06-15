@@ -562,6 +562,7 @@ void moveGameObjects() {
 }
 
 void debugger() {
+  textSize(16);
   fill(255, 0, 0);
   text(frameRate, 20, 20);
   if (dead) {
