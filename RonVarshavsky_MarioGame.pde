@@ -25,285 +25,286 @@ int[][] blocks = {
 /*platforms*/
 
   // FOR FIFTH NUMBER: 0 == ENEMY, 1 == FLOOR, 2 == PIPE, 3==WALL, 4 == QUESTION, 5== TILE
+  // SIXTH NUMBER IS FOR COIN; 1 = COIN_BLOCK 0 = USED BLOCK / PLATFORM
   {
-    0, h-30, 200, 30, 1 // initial block
+    0, h-30, 200, 30, 1,0 // initial block
   }, 
   {
-    -50, 0, 50, h, 3 // back wall
+    -50, 0, 50, h, 3,0 // back wall
   }, 
   {
-    10700, 0, 50, h, 3 // end wall
+    10700, 0, 50, h, 3 ,0// end wall
   }, 
   // platforms
   {
-    200, h-30, 200, 30, 1
+    200, h-30, 200, 30, 1,0
   }, 
   {
-    400, h-30, 200, 30, 1
+    400, h-30, 200, 30, 1,0
   }, 
   {
-    600, h-30, 200, 30, 1
+    600, h-30, 200, 30, 1,0
   }, 
   {
-    800, h-30, 200, 30, 1
+    800, h-30, 200, 30, 1, 0
   }, 
   {
-    900, h-60, 200, 60, 1
+    900, h-60, 200, 60, 1, 0
   }, 
   {
-    1000, h-120, 200, 120, 1
+    1000, h-120, 200, 120, 1, 0
   }, 
   {
-    1200, h-30, 200, 30, 1
+    1200, h-30, 200, 30, 1, 0
   }, 
   {
-    1400, h-60, 200, 60, 1
+    1400, h-60, 200, 60, 1, 0
   }, 
   {
-    1600, h-30, 200, 30, 1
+    1600, h-30, 200, 30, 1, 0
   }, 
   {
-    1800, h-30, 200, 30, 1
+    1800, h-30, 200, 30, 1, 0
   }, 
   {
-    2100, h-30, 200, 30, 1
+    2100, h-30, 200, 30, 1, 0
   }, 
   {
-    2300, h-30, 200, 30, 1
+    2300, h-30, 200, 30, 1, 0
   }, 
   {
-    2500, h-30, 200, 30, 1
+    2500, h-30, 200, 30, 1, 0
   }, 
   {
-    2700, h-30, 200, 30, 1
+    2700, h-30, 200, 30, 1, 0
   }, 
   {
-    2900, h-30, 200, 30, 1
+    2900, h-30, 200, 30, 1, 0
   }, 
   {
-    3100, h-30, 200, 30, 1
+    3100, h-30, 200, 30, 1, 0
   }, 
   {
-    3400, h-30, 200, 30, 1
+    3400, h-30, 200, 30, 1, 0
   }, 
   {
-    3700, h-30, 200, 30, 1
+    3700, h-30, 200, 30, 1, 0
   }, 
   {
-    3900, h-30, 200, 30, 1
+    3900, h-30, 200, 30, 1, 0
   }, 
   {
-    4100, h-30, 200, 30, 1
+    4100, h-30, 200, 30, 1, 0
   }, 
   {
-    4300, h-30, 200, 30, 1
+    4300, h-30, 200, 30, 1, 0
   }, 
   {
-    4500, h-30, 200, 30, 1
+    4500, h-30, 200, 30, 1, 0
   }, 
   {
-    4700, h-30, 200, 30, 1
+    4700, h-30, 200, 30, 1, 0
   }, 
   {
-    5000, h-30, 200, 30, 1
+    5000, h-30, 200, 30, 1, 0
   }, 
   {
-    5200, h-30, 200, 30, 1
+    5200, h-30, 200, 30, 1, 0
   }, 
   {
-    5400, h-30, 200, 30, 1
+    5400, h-30, 200, 30, 1, 0
   }, 
   {
-    5600, h-30, 200, 30, 1
+    5600, h-30, 200, 30, 1, 0
   }, 
   {
-    5800, h-30, 200, 30, 1
+    5800, h-30, 200, 30, 1, 0
   }, 
   {
-    6100, h-30, 200, 30, 1
+    6100, h-30, 200, 30, 1, 0
   }, 
   {
-    6300, h-30, 200, 30, 1
+    6300, h-30, 200, 30, 1, 0
   }, 
   {
-    6500, h-30, 200, 30, 1
+    6500, h-30, 200, 30, 1, 0
   }, 
   {
-    6700, h-60, 200, 60, 1
+    6700, h-60, 200, 60, 1, 0
   }, 
   {
-    6900, h-120, 200, 120, 1
+    6900, h-120, 200, 120, 1, 0
   }, 
   {
-    7100, h-120, 200, 120, 1
+    7100, h-120, 200, 120, 1, 0
   }, 
   {
-    7300, h-120, 200, 120, 1
+    7300, h-120, 200, 120, 1, 0
   }, 
   {
-    7500, h-60, 200, 60, 1
+    7500, h-60, 200, 60, 1, 0
   }, 
   {
-    7800, h-30, 200, 30, 1
+    7800, h-30, 200, 30, 1, 0
   }, 
   {
-    8000, h-30, 200, 30, 1
+    8000, h-30, 200, 30, 1, 0
   }, 
   {
-    8200, h-30, 200, 30, 1
+    8200, h-30, 200, 30, 1, 0
   }, 
   {
-    8500, h-30, 200, 30, 1
+    8500, h-30, 200, 30, 1, 0
   }, 
   {
-    8700, h-30, 200, 30, 1
+    8700, h-30, 200, 30, 1, 0
   }, 
   {
-    8900, h-30, 200, 30, 1
+    8900, h-30, 200, 30, 1, 0
   }, 
   {
-    9100, h-30, 200, 30, 1
+    9100, h-30, 200, 30, 1, 0
   }, 
   {
-    9300, h-30, 200, 30, 1
+    9300, h-30, 200, 30, 1, 0
   }, 
   {
-    9700, h-30, 200, 30, 1
+    9700, h-30, 200, 30, 1, 0
   }, 
   {
-    9900, h-30, 200, 30, 1
+    9900, h-30, 200, 30, 1, 0
   }, 
   {
-    10100, h-30, 200, 30, 1
+    10100, h-30, 200, 30, 1, 0
   }, 
   {
-    10300, h-30, 200, 30, 1
+    10300, h-30, 200, 30, 1, 0
   }, 
   {
-    10500, h-30, 200, 30, 1
+    10500, h-30, 200, 30, 1, 0
   }, 
   // pipes
   {
-    2000, h-100, 100, 100, 2
+    2000, h-100, 100, 100, 2, 0
   }, 
   {
-    3600, h-100, 100, 100, 2
+    3600, h-100, 100, 100, 2, 0
   }, 
   {
-    4900, h-100, 100, 100, 2
+    4900, h-100, 100, 100, 2, 0
   }, 
   {
-    8400, h-100, 100, 100, 2
+    8400, h-100, 100, 100, 2, 0
   }, 
 
 
   // question boxes
   {
-    550, h-175, 30, 30, 4
+    550, h-175, 30, 30, 4, 1
   }, {
-    660, h-175, 30, 30, 4
+    660, h-175, 30, 30, 4, 1
   }, {
-    690, h-175, 30, 30, 4
+    690, h-175, 30, 30, 4, 1
   }, {
-    2600, h-175, 30, 30, 4
+    2600, h-175, 30, 30, 4,1
   }, 
   {
-    2740, h-175, 30, 30, 4
+    2740, h-175, 30, 30, 4, 1
   }, 
   {
-    4380, h-175, 30, 30, 4
+    4380, h-175, 30, 30, 4, 1
   }, 
   {
-    6300, h-175, 30, 30, 4
+    6300, h-175, 30, 30, 4, 1
   }, 
   {
-    7300, h-265, 30, 30, 4
+    7300, h-265, 30, 30, 4, 1
   }, 
 
   // square tile boxes
   {
-    2710, h-175, 30, 30, 5
+    2710, h-175, 30, 30, 5, 0
   }, 
   {
-    2770, h-175, 30, 30, 5
-  }, 
-
-  {
-    2870, h-175, 30, 30, 5
-  }, 
-  {
-    2900, h-175, 30, 30, 5
-  }, 
-  {
-    3750, h-220, 30, 30, 5
-  }, 
-  {
-    3780, h-220, 30, 30, 5
-  }, 
-  {
-    3810, h-220, 30, 30, 5
-  }, 
-  {
-    3840, h-220, 30, 30, 5
-  }, 
-  {
-    3870, h-220, 30, 30, 5
+    2770, h-175, 30, 30, 5, 0
   }, 
 
   {
-    4200, h-175, 30, 30, 5
+    2870, h-175, 30, 30, 5, 0
   }, 
   {
-    4230, h-175, 30, 30, 5
+    2900, h-175, 30, 30, 5, 0
   }, 
   {
-    4260, h-175, 30, 30, 5
+    3750, h-220, 30, 30, 5, 0
+  }, 
+  {
+    3780, h-220, 30, 30, 5, 0
+  }, 
+  {
+    3810, h-220, 30, 30, 5, 0
+  }, 
+  {
+    3840, h-220, 30, 30, 5, 0
+  }, 
+  {
+    3870, h-220, 30, 30, 5, 0
   }, 
 
   {
-    4290, h-220, 30, 30, 5
+    4200, h-175, 30, 30, 5, 0
   }, 
   {
-    4320, h-220, 30, 30, 5
+    4230, h-175, 30, 30, 5, 0
   }, 
   {
-    4350, h-220, 30, 30, 5
+    4260, h-175, 30, 30, 5, 0
+  }, 
+
+  {
+    4290, h-220, 30, 30, 5, 0
   }, 
   {
-    4410, h-175, 30, 30, 5
+    4320, h-220, 30, 30, 5, 0
   }, 
   {
-    4440, h-175, 30, 30, 5
+    4350, h-220, 30, 30, 5, 0
   }, 
   {
-    5200, h-175, 30, 30, 5
+    4410, h-175, 30, 30, 5, 0
   }, 
   {
-    5300, h-175, 30, 30, 5
+    4440, h-175, 30, 30, 5, 0
   }, 
   {
-    5400, h-175, 30, 30, 5
+    5200, h-175, 30, 30, 5, 0
   }, 
   {
-    8700, h-175, 30, 30, 5
+    5300, h-175, 30, 30, 5, 0
   }, 
   {
-    8730, h-175, 30, 30, 5
+    5400, h-175, 30, 30, 5, 0
   }, 
   {
-    8760, h-175, 30, 30, 5
+    8700, h-175, 30, 30, 5, 0
   }, 
   {
-    8790, h-175, 30, 30, 5
+    8730, h-175, 30, 30, 5, 0
   }, 
   {
-    9900, h-175, 30, 30, 5
+    8760, h-175, 30, 30, 5, 0
   }, 
   {
-    9930, h-175, 30, 30, 5
+    8790, h-175, 30, 30, 5, 0
   }, 
   {
-    9960, h-175, 30, 30, 5
+    9900, h-175, 30, 30, 5, 0
+  }, 
+  {
+    9930, h-175, 30, 30, 5, 0
+  }, 
+  {
+    9960, h-175, 30, 30, 5, 0
   }, 
 
 };
@@ -323,6 +324,7 @@ float gravity=0;
 float bgSpeed;
 
 boolean dead = false;
+boolean debug = false;
 
 
 
@@ -330,9 +332,9 @@ PImage mario ;
 /*PImage floor;
  PImage pipe;
  PImage questionBlock;*/
- PImage coin;
+PImage coin;
 // PImage breakBlock;
- 
+
 PImage platform[] = new PImage[blocks.length];
 
 
@@ -349,6 +351,10 @@ boolean falling = true;
 int jumpPower = 12;
 boolean colliding = true;
 
+int bgX, bgX2;
+PImage bg, bg_inverse;
+
+int coins = 0;
 
 void setup() {
   size(800, 600);
@@ -357,7 +363,7 @@ void setup() {
   noSmooth();
   frameRate(30);
   textureMode(NORMAL);
-  
+
   mario = loadImage("pic1.bmp");
   /*
    floor = loadImage("ground.jpg");
@@ -365,7 +371,9 @@ void setup() {
    questionBlock = loadImage("question_block.jpg");
    breakBlock = loadImage("breakable_block.jpg");
    */
-   coin = loadImage("coin.png");
+  coin = loadImage("coin.png");
+  bg = loadImage("background.png");
+  bg_inverse = loadImage("background_inverse.png");
 
   for (int i =0; i < platform.length; i++) {
     if (blocks[i][4] == 1) {
@@ -376,7 +384,7 @@ void setup() {
       platform[i] = loadImage("question_block.jpg");
     } else if (blocks[i][4] == 5) {
       platform[i] = loadImage("breakable_block.jpg");
-    } 
+    }
   }
 
   psizeH = mario.height;
@@ -394,6 +402,8 @@ void setup() {
   for (int i = 0; i < blockVisible.length; i++) {
     blockVisible[i] = true;
   }
+
+  bgX2 = 910;
 }
 
 void blockUpdate() {
@@ -431,8 +441,10 @@ void blockUpdate() {
       }
       if (pyv<0 && blocks[i][4] == 5) {
         blockVisible[i] = false;
-      } else if (pyv<0 && blocks[i][4] == 4) {
+      } else if (pyv<0 && blocks[i][4] == 4 && blocks[i][5] == 1) {
         platform[i] = loadImage("used_block.png");
+        coins+=1;
+        blocks[i][5] = 0;
       }
       pyv=0;
       gravity=0;
@@ -440,9 +452,9 @@ void blockUpdate() {
 
     if (blocks[i][4] == 3) {
       rect(blocks[i][0], blocks[i][1], blocks[i][2], blocks[i][3]);
-    } else if(blocks[i][4] == 5 && blockVisible[i] == true) {
+    } else if (blocks[i][4] == 5 && blockVisible[i] == true) {
       image(platform[i], blocks[i][0], blocks[i][1], blocks[i][2], blocks[i][3]);
-    } else if(blocks[i][4] !=5) {
+    } else if (blocks[i][4] !=5) {
       image(platform[i], blocks[i][0], blocks[i][1], blocks[i][2], blocks[i][3]);
     }
   }
@@ -453,6 +465,9 @@ void blockUpdate() {
 boolean[] keys = new boolean[256];
 void keyPressed() {
   keys[keyCode]=true;
+  if(key == '~' || key == '`') {
+    debug = !debug;
+  }
 };
 void keyReleased() {
   keys[keyCode]=false;
@@ -517,10 +532,6 @@ void playerUpdate() {
 
   image(images [currentFrame], px, py, images[currentFrame].width, images[currentFrame].height);
   psizeH = mario.height;
-  stroke(0);
-  noFill();
-  rect(px, py, psizeW, psizeH);
-  noStroke();
   //  rect(px, py, psize, psize);
 }
 
@@ -538,20 +549,19 @@ void moveGameObjects() {
     } else {
     }
   }
+
+  if (pxv!=0) {
+    if (px >= width-200 && keys[RIGHT]) {
+      bgX -= bgSpeed;
+      bgX2 -= bgSpeed;
+    } else if (px <= 200 &&keys[LEFT]) {
+      bgX += bgSpeed;
+      bgX2 += bgSpeed;
+    }
+  }
 }
 
-
-
-void draw() {
-  background(250);
-
-  bgSpeed = pspeed;
-
-  playerInput();
-  blockUpdate();
-  playerUpdate();
-  moveGameObjects();
-
+void debugger() {
   fill(255, 0, 0);
   text(frameRate, 20, 20);
   if (dead) {
@@ -562,6 +572,44 @@ void draw() {
   text("Dead?", 20, 40);
   fill(0);
   text("PYV: " + pyv, 20, 60);
-  
-  
+  text("BGX: " + bgX, 20, 80);
+  text("BGX2: " + bgX2, 20, 100);
+  stroke(0);
+  noFill();
+  rect(px, py, psizeW, psizeH);
+  noStroke();
+}
+
+void draw() {
+  //background(250);
+  image(bg, bgX, 0, 910, height);
+  image(bg_inverse, bgX2, 0, 910, height);
+
+  if (bgX < -910) {
+    bgX = 910;
+  } else if (bgX > 910) {
+    bgX = -910;
+  }
+
+  if (bgX2 < -910) {
+    bgX2 = 910;
+  } else if (bgX2 > 910) {
+    bgX2 = -910;
+  }
+
+  bgSpeed = pspeed;
+
+  playerInput();
+  blockUpdate();
+  playerUpdate();
+  moveGameObjects();
+
+  if(debug) {
+    debugger();
+  }
+
+  image(coin, width-130, 20, 50, 50);
+  fill(255);
+  textSize(50);
+  text(coins, width-80, 65);
 }
