@@ -415,7 +415,7 @@ void blockUpdate() {
       fill(0, 250, 0);
     }
 
-    if (px+pxv+psizeW>blocks[i][0] && px+pxv<blocks[i][0]+blocks[i][2] && py+psizeH>blocks[i][1] && py<blocks[i][1]+blocks[i][3]) {
+    if (px+pxv+psizeW>blocks[i][0] && px+pxv<blocks[i][0]+blocks[i][2] && py+psizeH>blocks[i][1] && py<blocks[i][1]+blocks[i][3] && blockVisible[i]) {
       if (blocks[i][4]==0) {
         dead=true;
       }
@@ -425,7 +425,7 @@ void blockUpdate() {
       colliding = false;
     }
 
-    if (px+psizeW>blocks[i][0] && px<blocks[i][0]+blocks[i][2] && py+pyv+psizeH>blocks[i][1] && py<blocks[i][1]+blocks[i][3]) {
+    if (px+psizeW>blocks[i][0] && px<blocks[i][0]+blocks[i][2] && py+pyv+psizeH>blocks[i][1] && py<blocks[i][1]+blocks[i][3] && blockVisible[i]) {
       if (blocks[i][4]==0) {
         dead=true;
       }
@@ -435,7 +435,7 @@ void blockUpdate() {
       falling = false;
     }
 
-    if (px+psizeW>blocks[i][0] && px<blocks[i][0]+blocks[i][2] && py+psizeW>blocks[i][1] && py+pyv<blocks[i][1]+blocks[i][3]) {
+    if (px+psizeW>blocks[i][0] && px<blocks[i][0]+blocks[i][2] && py+psizeW>blocks[i][1] && py+pyv<blocks[i][1]+blocks[i][3] && blockVisible[i]) {
       if (blocks[i][4]==0) {
         dead=true;
       }
