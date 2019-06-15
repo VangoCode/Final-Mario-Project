@@ -33,7 +33,7 @@ int[][] blocks = {
   }, 
   {
     10700, 0, 50, h, 3 // end wall
-  },
+  }, 
   // platforms
   {
     200, h-30, 200, 30, 1
@@ -76,112 +76,112 @@ int[][] blocks = {
   }, 
   {
     2700, h-30, 200, 30, 1
-  },
+  }, 
   {
     2900, h-30, 200, 30, 1
-  },
+  }, 
   {
     3100, h-30, 200, 30, 1
-  },
+  }, 
   {
     3400, h-30, 200, 30, 1
-  },
+  }, 
   {
     3700, h-30, 200, 30, 1
-  },
+  }, 
   {
     3900, h-30, 200, 30, 1
-  },
+  }, 
   {
     4100, h-30, 200, 30, 1
-  },
+  }, 
   {
     4300, h-30, 200, 30, 1
-  },
+  }, 
   {
     4500, h-30, 200, 30, 1
-  },
+  }, 
   {
     4700, h-30, 200, 30, 1
-  },
+  }, 
   {
     5000, h-30, 200, 30, 1
-  },
+  }, 
   {
     5200, h-30, 200, 30, 1
-  },
+  }, 
   {
     5400, h-30, 200, 30, 1
-  },
+  }, 
   {
     5600, h-30, 200, 30, 1
-  },
+  }, 
   {
     5800, h-30, 200, 30, 1
-  },
+  }, 
   {
     6100, h-30, 200, 30, 1
-  },
+  }, 
   {
     6300, h-30, 200, 30, 1
-  },
+  }, 
   {
     6500, h-30, 200, 30, 1
-  },
+  }, 
   {
     6700, h-60, 200, 60, 1
-  },
+  }, 
   {
     6900, h-120, 200, 120, 1
-  },
+  }, 
   {
     7100, h-120, 200, 120, 1
-  },
+  }, 
   {
     7300, h-120, 200, 120, 1
-  },
+  }, 
   {
     7500, h-60, 200, 60, 1
-  },
+  }, 
   {
     7800, h-30, 200, 30, 1
-  },
+  }, 
   {
     8000, h-30, 200, 30, 1
-  },
+  }, 
   {
     8200, h-30, 200, 30, 1
-  },
+  }, 
   {
     8500, h-30, 200, 30, 1
-  },
+  }, 
   {
     8700, h-30, 200, 30, 1
-  },
+  }, 
   {
     8900, h-30, 200, 30, 1
-  },
+  }, 
   {
     9100, h-30, 200, 30, 1
-  },
+  }, 
   {
     9300, h-30, 200, 30, 1
-  },
+  }, 
   {
     9700, h-30, 200, 30, 1
-  },
+  }, 
   {
     9900, h-30, 200, 30, 1
-  },
+  }, 
   {
     10100, h-30, 200, 30, 1
-  },
+  }, 
   {
     10300, h-30, 200, 30, 1
-  },
+  }, 
   {
     10500, h-30, 200, 30, 1
-  },
+  }, 
   // pipes
   {
     2000, h-100, 100, 100, 2
@@ -191,10 +191,10 @@ int[][] blocks = {
   }, 
   {
     4900, h-100, 100, 100, 2
-  },
+  }, 
   {
     8400, h-100, 100, 100, 2
-  },
+  }, 
 
 
   // question boxes
@@ -209,31 +209,31 @@ int[][] blocks = {
   }, 
   {
     2740, h-175, 30, 30, 4
-  },
+  }, 
   {
     4380, h-175, 30, 30, 4
-  },
+  }, 
   {
     6300, h-175, 30, 30, 4
-  },
+  }, 
   {
     7300, h-265, 30, 30, 4
-  },
-  
+  }, 
+
   // square tile boxes
   {
     2710, h-175, 30, 30, 5
-  },
+  }, 
   {
     2770, h-175, 30, 30, 5
-  },
-  
+  }, 
+
   {
     2870, h-175, 30, 30, 5
-  },
+  }, 
   {
     2900, h-175, 30, 30, 5
-  },
+  }, 
   {
     3750, h-220, 30, 30, 5
   }, 
@@ -249,63 +249,63 @@ int[][] blocks = {
   {
     3870, h-220, 30, 30, 5
   }, 
-  
+
   {
     4200, h-175, 30, 30, 5
-  },
+  }, 
   {
     4230, h-175, 30, 30, 5
-  },
+  }, 
   {
     4260, h-175, 30, 30, 5
-  },
-  
+  }, 
+
   {
     4290, h-220, 30, 30, 5
-  },
+  }, 
   {
     4320, h-220, 30, 30, 5
-  },
+  }, 
   {
     4350, h-220, 30, 30, 5
-  },
+  }, 
   {
     4410, h-175, 30, 30, 5
-  },
+  }, 
   {
     4440, h-175, 30, 30, 5
-  },
+  }, 
   {
     5200, h-175, 30, 30, 5
-  },
+  }, 
   {
     5300, h-175, 30, 30, 5
-  },
+  }, 
   {
     5400, h-175, 30, 30, 5
-  },
+  }, 
   {
     8700, h-175, 30, 30, 5
-  },
+  }, 
   {
     8730, h-175, 30, 30, 5
-  },
+  }, 
   {
     8760, h-175, 30, 30, 5
-  },
+  }, 
   {
     8790, h-175, 30, 30, 5
-  },
+  }, 
   {
     9900, h-175, 30, 30, 5
-  },
+  }, 
   {
     9930, h-175, 30, 30, 5
-  },
+  }, 
   {
     9960, h-175, 30, 30, 5
-  },
-  
+  }, 
+
 };
 boolean[] blockVisible = new boolean[blocks.length];
 
@@ -325,12 +325,16 @@ float bgSpeed;
 boolean dead = false;
 
 
+
 PImage mario ;
-PImage floor;
-PImage pipe;
-PImage questionBlock;
-PImage coin;
-PImage breakBlock;
+/*PImage floor;
+ PImage pipe;
+ PImage questionBlock;*/
+ PImage coin;
+// PImage breakBlock;
+ 
+PImage platform[] = new PImage[blocks.length];
+
 
 int currentFrame = 0;                 // current view of mario
 String marioDir = "left";             // direction in which mario is facing
@@ -353,13 +357,28 @@ void setup() {
   noSmooth();
   frameRate(30);
   textureMode(NORMAL);
-
+  
   mario = loadImage("pic1.bmp");
-  floor = loadImage("ground.jpg");
-  pipe = loadImage("pipe.png");
-  questionBlock = loadImage("question_block.jpg");
-  breakBlock = loadImage("breakable_block.jpg");
-  coin = loadImage("coin.png");
+  /*
+   floor = loadImage("ground.jpg");
+   pipe = loadImage("pipe.png");
+   questionBlock = loadImage("question_block.jpg");
+   breakBlock = loadImage("breakable_block.jpg");
+   */
+   coin = loadImage("coin.png");
+
+  for (int i =0; i < platform.length; i++) {
+    if (blocks[i][4] == 1) {
+      platform[i] = loadImage("ground.jpg");
+    } else if (blocks[i][4] == 2) {
+      platform[i] = loadImage("pipe.png");
+    } else if (blocks[i][4] == 4) {
+      platform[i] = loadImage("question_block.jpg");
+    } else if (blocks[i][4] == 5) {
+      platform[i] = loadImage("breakable_block.jpg");
+    } 
+  }
+
   psizeH = mario.height;
   psizeW = mario.width;
 
@@ -372,7 +391,7 @@ void setup() {
     String imageName = "pic" + nf (i, 1) + ".bmp";
     images [i] = loadImage (imageName); // load each image
   }
-  for(int i = 0; i < blockVisible.length; i++) {
+  for (int i = 0; i < blockVisible.length; i++) {
     blockVisible[i] = true;
   }
 }
@@ -410,23 +429,21 @@ void blockUpdate() {
       if (blocks[i][4]==0) {
         dead=true;
       }
-      if(pyv<0 && blocks[i][4] == 5) {
+      if (pyv<0 && blocks[i][4] == 5) {
         blockVisible[i] = false;
+      } else if (pyv<0 && blocks[i][4] == 4) {
+        platform[i] = loadImage("used_block.png");
       }
       pyv=0;
       gravity=0;
     }
 
-    if (blocks[i][4] == 1 && blockVisible[i]) {
-      image(floor, blocks[i][0], blocks[i][1], blocks[i][2], blocks[i][3]);
-    } else if (blocks[i][4] == 3 && blockVisible[i]) {
+    if (blocks[i][4] == 3) {
       rect(blocks[i][0], blocks[i][1], blocks[i][2], blocks[i][3]);
-    } else if (blocks[i][4] == 2 && blockVisible[i]) {
-      image(pipe, blocks[i][0], blocks[i][1], blocks[i][2], blocks[i][3]);
-    } else if (blocks[i][4] == 4 && blockVisible[i]) {
-      image(questionBlock, blocks[i][0], blocks[i][1], blocks[i][2], blocks[i][3]);
-    } else if (blocks[i][4] == 5 && blockVisible[i]) {
-      image(breakBlock, blocks[i][0], blocks[i][1], blocks[i][2], blocks[i][3]);
+    } else if(blocks[i][4] == 5 && blockVisible[i] == true) {
+      image(platform[i], blocks[i][0], blocks[i][1], blocks[i][2], blocks[i][3]);
+    } else if(blocks[i][4] !=5) {
+      image(platform[i], blocks[i][0], blocks[i][1], blocks[i][2], blocks[i][3]);
     }
   }
 }
@@ -519,7 +536,6 @@ void moveGameObjects() {
         blocks[i][0] += bgSpeed;
       }
     } else {
-      
     }
   }
 }
@@ -528,7 +544,7 @@ void moveGameObjects() {
 
 void draw() {
   background(250);
-  
+
   bgSpeed = pspeed;
 
   playerInput();
@@ -546,4 +562,6 @@ void draw() {
   text("Dead?", 20, 40);
   fill(0);
   text("PYV: " + pyv, 20, 60);
+  
+  
 }
