@@ -3,47 +3,30 @@ int h = 600;
 
 int[][] blocks = {
 
-  //boundary box
-/*  {
- 0, -21, w, 20, 1
- }
- , 
- {
- 0, h, w, 20, 1
- }
- , 
- {
- -21, 0, 20, h, 1
- }
- , 
- {
- w, 0, 20, h, 1
- }
- , */
 
 
 /*platforms*/
 
-  // FOR FIFTH NUMBER: 0 == ENEMY, 1 == FLOOR, 2 == PIPE, 3==WALL, 4 == QUESTION, 5== TILE
+  // FOR FIFTH NUMBER: 0 == ENEMY, 1 == FLOOR, 2 == PIPE, 3==WALL, 4 == QUESTION, 5== TILE, 6 == COIN
   // SIXTH NUMBER IS FOR COIN; 1 = COIN_BLOCK 0 = USED BLOCK / PLATFORM
   {
-    0, h-30, 200, 30, 1,0 // initial block
+    0, h-30, 200, 30, 1, 0 // initial block
   }, 
   {
-    -50, 0, 50, h, 3,0 // back wall
+    -50, 0, 50, h, 3, 0 // back wall
   }, 
   {
-    10700, 0, 50, h, 3 ,0// end wall
+    10700, 0, 50, h, 3, 0// end wall
   }, 
   // platforms
   {
-    200, h-30, 200, 30, 1,0
+    200, h-30, 200, 30, 1, 0
   }, 
   {
-    400, h-30, 200, 30, 1,0
+    400, h-30, 200, 30, 1, 0
   }, 
   {
-    600, h-30, 200, 30, 1,0
+    600, h-30, 200, 30, 1, 0
   }, 
   {
     800, h-30, 200, 30, 1, 0
@@ -206,7 +189,7 @@ int[][] blocks = {
   }, {
     690, h-175, 30, 30, 4, 1
   }, {
-    2600, h-175, 30, 30, 4,1
+    2600, h-175, 30, 30, 4, 1
   }, 
   {
     2740, h-175, 30, 30, 4, 1
@@ -222,6 +205,18 @@ int[][] blocks = {
   }, 
 
   // square tile boxes
+  {
+    1470, h-175, 30, 30, 5, 0
+  }, 
+  {
+    1500, h-175, 30, 30, 5, 0
+  }, 
+  {
+    1500, h-275, 30, 30, 5, 0
+  }, 
+  {
+    1530, h-175, 30, 30, 5, 0
+  }, 
   {
     2710, h-175, 30, 30, 5, 0
   }, 
@@ -306,6 +301,74 @@ int[][] blocks = {
   {
     9960, h-175, 30, 30, 5, 0
   }, 
+  // COINS
+  {
+    850, h-130, 30, 30, 6, 0
+  }, 
+  {
+    900, h-150, 30, 30, 6, 0
+  }, 
+  {
+    940, h-150, 30, 30, 6, 0
+  }, 
+  {
+    1050, h-190, 30, 30, 6, 0
+  }, 
+  {
+    1100, h-210, 30, 30, 6, 0
+  }, 
+  {
+    1140, h-210, 30, 30, 6, 0
+  }, 
+  {
+    1970, h-150, 30, 30, 6, 0
+  },
+  {
+    2020, h-180, 30, 30, 6, 0
+  },
+  {
+    2050, h-180, 30, 30, 6, 0
+  },
+  {
+    2100, h-150, 30, 30, 6, 0
+  },
+  {
+    3570, h-150, 30, 30, 6, 0
+  },
+  {
+    3620, h-180, 30, 30, 6, 0
+  },
+  {
+    3650, h-180, 30, 30, 6, 0
+  },
+  {
+    3700, h-150, 30, 30, 6, 0
+  },
+  {
+    4870, h-150, 30, 30, 6, 0
+  },
+  {
+    4920, h-180, 30, 30, 6, 0
+  },
+  {
+    4950, h-180, 30, 30, 6, 0
+  },
+  {
+    5000, h-150, 30, 30, 6, 0
+  },
+  {
+    8370, h-150, 30, 30, 6, 0
+  },
+  {
+    8420, h-180, 30, 30, 6, 0
+  },
+  {
+    8450, h-180, 30, 30, 6, 0
+  },
+  {
+    8600, h-150, 30, 30, 6, 0
+  },
+
 
 };
 boolean[] blockVisible = new boolean[blocks.length];
@@ -384,6 +447,8 @@ void setup() {
       platform[i] = loadImage("question_block.jpg");
     } else if (blocks[i][4] == 5) {
       platform[i] = loadImage("breakable_block.jpg");
+    } else if (blocks[i][4] == 6) {
+      platform[i] = loadImage("coin.png");
     }
   }
 
@@ -419,8 +484,13 @@ void blockUpdate() {
       if (blocks[i][4]==0) {
         dead=true;
       }
-      pxv=0;
-      colliding=true;
+      if (blocks[i][4]!=6) {
+        pxv=0;
+        colliding=true;
+      } else {
+        blockVisible[i] = false;
+        coins +=1;
+      }
     } else {
       colliding = false;
     }
@@ -429,10 +499,14 @@ void blockUpdate() {
       if (blocks[i][4]==0) {
         dead=true;
       }
-
-      pyv=0;
-      gravity=0;
-      falling = false;
+      if (blocks[i][4]!=6) {
+        pyv=0;
+        gravity=0;
+        falling = false;
+      } else {
+        blockVisible[i] = false;
+        coins +=1;
+      }
     }
 
     if (px+psizeW>blocks[i][0] && px<blocks[i][0]+blocks[i][2] && py+psizeW>blocks[i][1] && py+pyv<blocks[i][1]+blocks[i][3] && blockVisible[i]) {
@@ -446,15 +520,23 @@ void blockUpdate() {
         coins+=1;
         blocks[i][5] = 0;
       }
-      pyv=0;
-      gravity=0;
+
+      if (blocks[i][4]!=6) {
+        pyv=0;
+        gravity=0;
+      } else {
+        blockVisible[i] = false;
+        coins +=1;
+      }
     }
 
     if (blocks[i][4] == 3) {
       rect(blocks[i][0], blocks[i][1], blocks[i][2], blocks[i][3]);
     } else if (blocks[i][4] == 5 && blockVisible[i] == true) {
       image(platform[i], blocks[i][0], blocks[i][1], blocks[i][2], blocks[i][3]);
-    } else if (blocks[i][4] !=5) {
+    } else if (blocks[i][4] == 6 && blockVisible[i] == true) {
+      image(platform[i], blocks[i][0], blocks[i][1], blocks[i][2], blocks[i][3]);
+    } else if (blocks[i][4] !=5 && blocks[i][4] != 6) {
       image(platform[i], blocks[i][0], blocks[i][1], blocks[i][2], blocks[i][3]);
     }
   }
@@ -465,7 +547,7 @@ void blockUpdate() {
 boolean[] keys = new boolean[256];
 void keyPressed() {
   keys[keyCode]=true;
-  if(key == '~' || key == '`') {
+  if (key == '~' || key == '`') {
     debug = !debug;
   }
 };
@@ -605,7 +687,7 @@ void draw() {
   playerUpdate();
   moveGameObjects();
 
-  if(debug) {
+  if (debug) {
     debugger();
   }
 
