@@ -371,6 +371,7 @@ int[][] blocks = {
 
 
 };
+int[][] rBlocks = new int[blocks.length][6];
 boolean[] blockVisible = new boolean[blocks.length];
 
 
@@ -420,6 +421,8 @@ PImage bg, bg_inverse;
 
 int coins = 0;
 int lives = 3;
+int loseAlpha;
+Boolean invincible = false;
 
 void setup() {
   size(800, 600);
@@ -428,6 +431,8 @@ void setup() {
   noSmooth();
   frameRate(30);
   textureMode(NORMAL);
+
+  loseAlpha = 0;
 
   mario = loadImage("pic1.bmp");
   mLives = loadImage("pic4.bmp");
@@ -472,6 +477,12 @@ void setup() {
   }
 
   bgX2 = 910;
+
+  for (int i = 0; i < blocks.length; i++) {
+    for (int n = 0; n < 6; n++) {
+      rBlocks[i][n] = blocks[i][n];
+    }
+  }
 }
 
 void blockUpdate() {
@@ -666,6 +677,39 @@ void debugger() {
   noStroke();
 }
 
+void checkDead() {
+  if (dead) {
+
+    if (!invincible) {
+      lives -= 1;
+      gravity-=jumpPower;
+      invincible = true;
+    } 
+
+    if (loseAlpha < 255) {
+      loseAlpha+=5;
+    } else {
+      dead = false;
+      px = rx;
+      py = ry;
+      invincible = false;
+      for (int i = 0; i < blocks.length; i++) {
+        blockVisible[i] = true;
+        if (blocks[i][4] == 4) {
+          platform[i] = loadImage("question_block.jpg");
+        }
+        for (int n = 0; n < 6; n++) {
+          blocks[i][n] = rBlocks[i][n];
+        }
+      }
+      while (loseAlpha != 0) {
+        loseAlpha -=5;
+        delay(50);
+      }
+    }
+  }
+}
+
 void draw() {
   //background(250);
   image(bg, bgX, 0, 910, height);
@@ -689,6 +733,7 @@ void draw() {
   blockUpdate();
   playerUpdate();
   moveGameObjects();
+  checkDead();
 
   if (debug) {
     debugger();
@@ -701,4 +746,7 @@ void draw() {
 
   image(coin, width-130, 20, 50, 50);
   text(coins, width-80, 65);
+
+  fill(0, loseAlpha);
+  rect(0, 0, width, height);
 }
