@@ -322,52 +322,52 @@ int[][] blocks = {
   }, 
   {
     1970, h-150, 30, 30, 6, 0
-  },
+  }, 
   {
     2020, h-180, 30, 30, 6, 0
-  },
+  }, 
   {
     2050, h-180, 30, 30, 6, 0
-  },
+  }, 
   {
     2100, h-150, 30, 30, 6, 0
-  },
+  }, 
   {
     3570, h-150, 30, 30, 6, 0
-  },
+  }, 
   {
     3620, h-180, 30, 30, 6, 0
-  },
+  }, 
   {
     3650, h-180, 30, 30, 6, 0
-  },
+  }, 
   {
     3700, h-150, 30, 30, 6, 0
-  },
+  }, 
   {
     4870, h-150, 30, 30, 6, 0
-  },
+  }, 
   {
     4920, h-180, 30, 30, 6, 0
-  },
+  }, 
   {
     4950, h-180, 30, 30, 6, 0
-  },
+  }, 
   {
     5000, h-150, 30, 30, 6, 0
-  },
+  }, 
   {
     8370, h-150, 30, 30, 6, 0
-  },
+  }, 
   {
     8420, h-180, 30, 30, 6, 0
-  },
+  }, 
   {
     8450, h-180, 30, 30, 6, 0
-  },
+  }, 
   {
     8600, h-150, 30, 30, 6, 0
-  },
+  }, 
 
 
 };
@@ -392,6 +392,7 @@ boolean debug = false;
 
 
 PImage mario ;
+PImage mLives;
 /*PImage floor;
  PImage pipe;
  PImage questionBlock;*/
@@ -418,6 +419,7 @@ int bgX, bgX2;
 PImage bg, bg_inverse;
 
 int coins = 0;
+int lives = 3;
 
 void setup() {
   size(800, 600);
@@ -428,6 +430,7 @@ void setup() {
   textureMode(NORMAL);
 
   mario = loadImage("pic1.bmp");
+  mLives = loadImage("pic4.bmp");
   /*
    floor = loadImage("ground.jpg");
    pipe = loadImage("pipe.png");
@@ -691,8 +694,11 @@ void draw() {
     debugger();
   }
 
-  image(coin, width-130, 20, 50, 50);
   fill(255);
   textSize(50);
+  image(mLives, 30, 20, 25, 50);
+  text("x" + lives, 65, 65);
+
+  image(coin, width-130, 20, 50, 50);
   text(coins, width-80, 65);
 }
